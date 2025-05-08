@@ -1,6 +1,6 @@
 'use client';
 
-import { AppBar, Button, Toolbar as ToolbarMUI } from '@mui/material';
+import { AppBar, Button, Divider, Toolbar as ToolbarMUI } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 const Toolbar = () => {
@@ -33,8 +33,8 @@ const Toolbar = () => {
       >
         <ToolbarMUI
           className={`${
-            topView ? '' : `rounded-xl shadow-xl bg-[white]`
-          } transition-all flex justify-center`}
+            topView ? '' : `rounded-xl shadow-xl hover:shadow-md bg-[white]`
+          } transition-all flex justify-center gap-2`}
         >
           <Button
             variant='text'
@@ -44,6 +44,16 @@ const Toolbar = () => {
             onClick={() => scrollTo('hero')}
           >
             ME
+          </Button>
+          <Divider orientation='vertical' flexItem variant='middle' />
+          <Button
+            variant='text'
+            classes={{
+              root: 'min-w-4',
+            }}
+            onClick={() => scrollTo('project')}
+          >
+            Project Experiences
           </Button>
         </ToolbarMUI>
       </AppBar>
