@@ -4,6 +4,8 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import { Roboto } from 'next/font/google';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/theme';
+import { ReactNode } from 'react';
+import Toolbar from '@/components/Toolbar';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -19,17 +21,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  hero,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
+  hero: ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${roboto.variable} antialiased`}
-        id="__next"
-      >
+    <html lang='en'>
+      <body className={`${roboto.variable} antialiased m-0`} id='__next'>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeProvider theme={theme}>
+            <Toolbar />
+            {hero}
             {children}
           </ThemeProvider>
         </AppRouterCacheProvider>
