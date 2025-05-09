@@ -7,4 +7,5 @@ export interface ProjectData {
   projectYearEnd: string;
   projectDescription: string;
   imgThumbnail: StaticImageData;
+  techStackUrl?: (string | StaticImageData)[];
 }
