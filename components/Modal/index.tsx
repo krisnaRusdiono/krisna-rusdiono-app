@@ -8,7 +8,7 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '100%',
+  width: '90%',
   bgcolor: 'background.paper',
   border: '2px solid inherit',
   boxShadow: 24,
@@ -32,7 +32,7 @@ const Modal = ({ open, toggleModal, data }: { open: boolean; toggleModal: () => 
         aria-labelledby='modal-modal-title'
         aria-describedby='modal-modal-description'
       >
-        <Box sx={style}>
+        <Box sx={style} className="max-w-[40rem]">
           <Image
             src={imgThumbnail}
             alt={projectName}
@@ -47,7 +47,7 @@ const Modal = ({ open, toggleModal, data }: { open: boolean; toggleModal: () => 
                 )
               </sup>
             </Typography>
-            <Typography id='modal-modal-description' sx={{ mt: 2 }}>
+            <Typography id='modal-modal-description' sx={{ mt: 2 }} className='whitespace-pre-line'>
               {projectDescriptionLong}
             </Typography>
             <div className='flex flex-col gap-2'>
