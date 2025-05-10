@@ -8,42 +8,43 @@ const ContactSlot = () => (
   <ContentContainer
     id='contact'
     badge='contact'
-    className='flex-col [&>p]:text-center gap-8 mx-auto'
+    className='flex-col [&>p]:text-center gap-8 mx-auto max-w-[60rem]'
   >
-    <Typography className='text-center'>
-      Glad you read this 🙂, feel free to reach me on these platform!
-    </Typography>
-    <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-      {CONTACT_DATA.map(({ name, icon, url, value }) => (
-        <Link
-          href={url}
-          key={name}
-          className='flex items-center gap-3 text-inherit no-underline hover:no-underline focus:outline-none p-4 bg-slate-200 rounded-full shadow-lg hover:shadow-md transition-all hover:bg-slate-50'
-          target='_blank'
+    <div className='mt-24'>
+      <Typography className='text-center'>
+        Glad you read this 🙂, feel free to reach me on these platform!
+      </Typography>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 py-8'>
+        {CONTACT_DATA.map(({ name, icon, url, value }) => (
+          <Link
+            href={url}
+            key={name}
+            className='flex items-center gap-3 text-inherit no-underline hover:no-underline focus:outline-none p-4 bg-slate-200 rounded-full shadow-lg hover:shadow-md transition-all hover:bg-slate-50'
+            target='_blank'
+          >
+            <Image
+              src={icon}
+              alt={`${name} icon`}
+              width={32}
+              height={32}
+              className='[&>*]:fill-black'
+            />
+            <Divider orientation='vertical' />
+            <Typography className='overflow-auto'>{value}</Typography>
+          </Link>
+        ))}
+      </div>
+      <Typography className='text-center'>
+        And for HR, i am more than happy to share with you my latest CV that you
+        can download
+        <a
+          className='min-w-0 px-1 lowercase text-inherit hover:!bg-transparent'
+          href='/api/download'
         >
-          <Image
-            src={icon}
-            alt={`${name} icon`}
-            width={32}
-            height={32}
-            className='[&>*]:fill-black'
-          />
-          <Divider orientation='vertical' />
-          <Typography className='overflow-auto'>{value}</Typography>
-        </Link>
-      ))}
+          here
+        </a>
+      </Typography>
     </div>
-
-    <Typography>
-      And for HR, i am more than happy to share with you my latest CV that you
-      can download
-      <a
-        className='min-w-0 px-1 lowercase text-inherit hover:!bg-transparent'
-        href='/api/download'
-      >
-        here
-      </a>
-    </Typography>
   </ContentContainer>
 );
 

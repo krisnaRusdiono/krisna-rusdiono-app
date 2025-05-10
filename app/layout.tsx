@@ -25,11 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${roboto.variable} antialiased m-0`} id='__next'>
+      <body
+        className={`${roboto.variable} antialiased m-0 simple-scrollbar`}
+        id='__next'
+      >
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-          <ThemeProvider theme={theme}>
-            {children}
-          </ThemeProvider>
+          <ThemeProvider theme={theme}>{children}</ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
