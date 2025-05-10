@@ -13,7 +13,7 @@ const ContactSlot = () => (
     <Typography className='text-center'>
       Glad you read this 🙂, feel free to reach me on these platform!
     </Typography>
-    <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4'>
+    <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
       {CONTACT_DATA.map(({ name, icon, url, value }) => (
         <Link
           href={url}
