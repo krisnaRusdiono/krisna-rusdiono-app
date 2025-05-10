@@ -17,14 +17,9 @@ import IcCss from '@/public/images/ic_css.svg';
 import IcReact from '@/public/images/ic_react.svg';
 import IcVue from '@/public/images/ic_vue.svg';
 import IcThreeDot from '@/public/images/ic_three_dot.svg';
-import { StaticImageData } from 'next/image';
+import { ItemData } from '@/types/itemData';
 
-export interface SkillData {
-    name: string;
-    icon: StaticImageData;
-}
-
-const SKILLS_DATA: SkillData[] = [
+const SKILLS_DATA: ItemData[] = [
   {
     name: 'HTML',
     icon: IcHtml,

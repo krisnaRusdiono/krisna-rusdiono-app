@@ -5,10 +5,12 @@ const MainLayout = ({
   hero,
   project,
   skills,
+  contact,
 }: {
   hero: ReactNode;
   project: ReactNode;
   skills: ReactNode;
+  contact: ReactNode;
 }) => {
   return (
     <>
@@ -16,6 +18,7 @@ const MainLayout = ({
       {hero}
       {skills}
       {project}
+      {contact}
     </>
   );
 };

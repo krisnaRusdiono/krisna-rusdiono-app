@@ -51,9 +51,29 @@ const Toolbar = () => {
             classes={{
               root: 'min-w-4',
             }}
+            onClick={() => scrollTo('skills')}
+          >
+            SKILLS
+          </Button>
+          <Divider orientation='vertical' flexItem variant='middle' />
+          <Button
+            variant='text'
+            classes={{
+              root: 'min-w-4',
+            }}
             onClick={() => scrollTo('project')}
           >
             Project Experiences
+          </Button>
+          <Divider orientation='vertical' flexItem variant='middle' />
+          <Button
+            variant='text'
+            classes={{
+              root: 'min-w-4',
+            }}
+            onClick={() => scrollTo('contact')}
+          >
+            Contact
           </Button>
         </ToolbarMUI>
       </AppBar>

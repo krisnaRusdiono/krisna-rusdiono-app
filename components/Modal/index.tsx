@@ -32,7 +32,7 @@ const Modal = ({ open, toggleModal, data }: { open: boolean; toggleModal: () => 
         aria-labelledby='modal-modal-title'
         aria-describedby='modal-modal-description'
       >
-        <Box sx={style} className="max-w-[40rem]">
+        <Box sx={style} className="max-w-[40rem] !rounded-2xl overflow-hidden">
           <Image
             src={imgThumbnail}
             alt={projectName}
