@@ -27,7 +27,7 @@ const HeroSlot = () => {
           </TransitionEnter>
           <TransitionEnter className='flex w-full justify-center' delay={0.4}>
             <div className='w-full flex justify-between max-w-80 md:max-w-none'>
-              <Typography>Web Developer</Typography>|
+              <Typography>Software Engineer</Typography>|
               <Typography>2021 - present</Typography>
             </div>
           </TransitionEnter>
@@ -47,7 +47,7 @@ const HeroSlot = () => {
             variant='body2'
             className='italic text-center my-4 max-w-[34rem]'
           >
-            I&apos;m a web developer with {yearsOfExperience} years of
+            I&apos;m a Software Engineer with {yearsOfExperience} years of
             experience from Bandung{' '}
             <Image
               src={IcIndonesia}
