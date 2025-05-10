@@ -2,6 +2,7 @@ import ContentContainer from '@/components/ContentContainer';
 import { Typography } from '@mui/material';
 import Image from 'next/image';
 import TalentImage from '@/public/images/krisna-rusdiono.png';
+import IcIndonesia from '@/public/images/ic_indonesia_fix.svg';
 
 const HeroSlot = () => {
   const yearsOfExperience = new Date().getFullYear() - 2021;
@@ -37,10 +38,12 @@ const HeroSlot = () => {
           className='italic text-center my-4 max-w-[34rem]'
         >
           I&apos;m a web developer with {yearsOfExperience} years of experience
-          from Indonesia, specializing in TypeScript and frameworks like React,
-          Next.js, Angular, and Vue.js. I focus on high output standards,
-          writing clean, maintainable code to create intuitive and high-performance
-          user interfaces.
+          from Bandung <Image src={IcIndonesia} alt='indonesia' width={12} className='mx-2' />, specializing
+          in TypeScript and frameworks like React, Next.js, Angular, and Vue.js.
+          <br />
+          <br />
+          I focus on high output standards, writing clean, maintainable code to
+          create intuitive and high-performance user interfaces.
         </Typography>
       </div>
     </ContentContainer>
