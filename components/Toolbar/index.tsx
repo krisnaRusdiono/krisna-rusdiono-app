@@ -35,7 +35,7 @@ const Toolbar = () => {
         <ToolbarMUI
           className={`${
             topView ? '' : `rounded-xl shadow-xl hover:shadow-md bg-[white]`
-          } transition-all flex justify-center gap-2`}
+          } transition-all flex justify-center gap-2 overflow-auto`}
         >
           <TransitionEnter delay={0.2}>
             <Button
@@ -69,7 +69,7 @@ const Toolbar = () => {
               }}
               onClick={() => scrollTo('project')}
             >
-              Project Experiences
+              Project
             </Button>
           </TransitionEnter>
           <Divider orientation='vertical' flexItem variant='middle' />

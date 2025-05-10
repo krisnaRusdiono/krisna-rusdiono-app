@@ -9,19 +9,21 @@ const HeroSlot = () => {
   const yearsOfExperience = new Date().getFullYear() - 2021;
   
   return (
-    <ContentContainer className='pb-24 max-w-40 md:max-w-none mx-auto -mt-12' id='hero'>
+    <ContentContainer
+      className='pb-24 max-w-40 md:max-w-none mx-auto -mt-12'
+      id='hero'
+    >
       <div
-        className='w-full flex flex-col justify-between items-center px-4 pt-4 gap-4 mt-20'
+        className='w-full flex flex-col justify-between items-center px-4 pt-4 gap-4 mt-20 box-border'
         id='hero'
       >
         <div className='flex flex-col gap-2 items-center justify-center pb-12'>
           <TransitionEnter delay={0.2}>
-            <Typography
-              variant='h2'
-              className='font-bold mx-auto text-center uppercase leading-[3.5rem] w-full flex items-center box-border px-4'
-            >
-              Krisna Rusdiono
-            </Typography>
+            <TransitionEnter delay={0.2}>
+              <Typography className='text-5xl md:text-6xl font-extrabold mx-auto text-center uppercase leading-[3.5rem] w-full flex items-center box-border px-4'>
+                Krisna Rusdiono
+              </Typography>
+            </TransitionEnter>
           </TransitionEnter>
           <TransitionEnter className='flex w-full justify-center' delay={0.4}>
             <div className='w-full flex justify-between max-w-80 md:max-w-none'>
