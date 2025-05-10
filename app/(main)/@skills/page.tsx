@@ -7,7 +7,7 @@ const ExpertiseSlot = () => {
     return (
       <ContentContainer id='expertise' displayType='grid' className='bg-slate-100 grid-cols-4 gap-4' badge='Skills & Familiarity'>
         {SKILLS_DATA.map(({ icon, name }) => (
-          <Tooltip title={name} key={name}>
+          <Tooltip title={name} key={name} className='hover:scale-110 transition-all'>
             <Image src={icon} alt={name} width={62} className='mx-auto self-center' />
           </Tooltip>
         ))}
