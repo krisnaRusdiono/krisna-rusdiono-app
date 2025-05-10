@@ -30,7 +30,9 @@ const ContactSlot = () => (
               className='[&>*]:fill-black'
             />
             <Divider orientation='vertical' />
-            <Typography className='overflow-auto'>{value}</Typography>
+            <Typography className='overflow-auto simple-scrollbar'>
+              {value}
+            </Typography>
           </Link>
         ))}
       </div>

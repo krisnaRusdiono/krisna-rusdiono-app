@@ -9,7 +9,7 @@ const HeroSlot = () => {
   const yearsOfExperience = new Date().getFullYear() - 2021;
   
   return (
-    <ContentContainer className='pb-24 -mt-12' id='hero'>
+    <ContentContainer className='pb-24 max-w-40 md:max-w-none mx-auto -mt-12' id='hero'>
       <div
         className='w-full flex flex-col justify-between items-center px-4 pt-4 gap-4 mt-20'
         id='hero'
@@ -35,7 +35,7 @@ const HeroSlot = () => {
             <Image
               alt='main-picture'
               src={TalentImage}
-              width={372}
+              width={280}
               className='transition-all'
             />
           </div>
