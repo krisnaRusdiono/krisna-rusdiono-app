@@ -19,6 +19,7 @@ const MainLayout = ({
       {skills}
       {project}
       {contact}
+      <div className='h-4 w-full bg-slate-900' />
     </>
   );
 };
