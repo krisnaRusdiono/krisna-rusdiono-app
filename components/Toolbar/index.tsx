@@ -2,6 +2,7 @@
 
 import { AppBar, Button, Divider, Toolbar as ToolbarMUI } from '@mui/material';
 import { useEffect, useState } from 'react';
+import TransitionEnter from '../Transition/Enter';
 
 const Toolbar = () => {
     const [topView, setTopView] = useState<boolean>(false);
@@ -36,45 +37,53 @@ const Toolbar = () => {
             topView ? '' : `rounded-xl shadow-xl hover:shadow-md bg-[white]`
           } transition-all flex justify-center gap-2`}
         >
-          <Button
-            variant='text'
-            classes={{
-              root: 'min-w-4',
-            }}
-            onClick={() => scrollTo('hero')}
-          >
-            ME
-          </Button>
+          <TransitionEnter delay={0.2}>
+            <Button
+              variant='text'
+              classes={{
+                root: 'min-w-4',
+              }}
+              onClick={() => scrollTo('hero')}
+            >
+              ME
+            </Button>
+          </TransitionEnter>
           <Divider orientation='vertical' flexItem variant='middle' />
-          <Button
-            variant='text'
-            classes={{
-              root: 'min-w-4',
-            }}
-            onClick={() => scrollTo('skills')}
-          >
-            SKILLS
-          </Button>
+          <TransitionEnter delay={0.4}>
+            <Button
+              variant='text'
+              classes={{
+                root: 'min-w-4',
+              }}
+              onClick={() => scrollTo('skills')}
+            >
+              SKILLS
+            </Button>
+          </TransitionEnter>
           <Divider orientation='vertical' flexItem variant='middle' />
-          <Button
-            variant='text'
-            classes={{
-              root: 'min-w-4',
-            }}
-            onClick={() => scrollTo('project')}
-          >
-            Project Experiences
-          </Button>
+          <TransitionEnter delay={0.6}>
+            <Button
+              variant='text'
+              classes={{
+                root: 'min-w-4',
+              }}
+              onClick={() => scrollTo('project')}
+            >
+              Project Experiences
+            </Button>
+          </TransitionEnter>
           <Divider orientation='vertical' flexItem variant='middle' />
-          <Button
-            variant='text'
-            classes={{
-              root: 'min-w-4',
-            }}
-            onClick={() => scrollTo('contact')}
-          >
-            Contact
-          </Button>
+          <TransitionEnter delay={0.8}>
+            <Button
+              variant='text'
+              classes={{
+                root: 'min-w-4',
+              }}
+              onClick={() => scrollTo('contact')}
+            >
+              Contact
+            </Button>
+          </TransitionEnter>
         </ToolbarMUI>
       </AppBar>
     );

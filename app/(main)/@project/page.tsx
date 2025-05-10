@@ -11,31 +11,27 @@ import { useMemo, useState } from 'react';
 
 const ProjectSlot = () => {
     const [selectedProject, setSelectedProject] = useState<ProjectData>();
-    const [showMore, setShowMore] = useState<boolean>(false);
     const [open, setOpen] = useState<boolean>(false);
+    const [size] = useState(10);
 
     const toggleModal = () => setOpen(!open);
-    const toggleShowMore = () => setShowMore(!showMore)
     const renderedData = useMemo(() => {
-      if (showMore) {
-        return PROJECT_DATA;
-      }
-
-      return PROJECT_DATA.slice(0, 4)
-    }, [showMore])
+      return PROJECT_DATA.slice(0, size)
+    }, [size])
 
     const handleClickDetail = (data: ProjectData) => {
       setSelectedProject(data);
       toggleModal();
     };
 
+
     return (
       <ContentContainer
         id='project'
         badge='Project Experiences'
-        className='bg-slate-900 flex-col'
+        className='bg-slate-900 flex-col [&>div>button]:flex [&>div>button]:mt-8'
       >
-        <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+        <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-28 max-h-screen overflow-auto simple-scrollbar'>
           {renderedData.map(project => (
             <div
               key={project.projectId}
@@ -65,14 +61,14 @@ const ProjectSlot = () => {
               <div className='p-4 bg-white min-h-24'>
                 <Typography
                   variant='h5'
-                  className='font-bold overflow-hidden text-ellipsis line-clamp-2'
+                  className='font-bold overflow-hidden text-ellipsis line-clamp-2 min-h-16'
                 >
                   {project.projectName}{' '}
                   <sup className='text-sm'>({project.projectYearStart})</sup>
                 </Typography>
                 <Typography
                   variant='caption'
-                  className='overflow-hidden text-ellipsis line-clamp-1'
+                  className='overflow-hidden text-ellipsis line-clamp-1 mt-2'
                 >
                   {project.projectDescription}
                 </Typography>
@@ -80,14 +76,6 @@ const ProjectSlot = () => {
             </div>
           ))}
         </div>
-        <Button
-          variant='text'
-          className='w-fit mx-auto'
-          onClick={toggleShowMore}
-        >
-          {showMore ? 'Hide some' : 'Show more'}
-        </Button>
-
         <Modal open={open} toggleModal={toggleModal} data={selectedProject} />
       </ContentContainer>
     );
