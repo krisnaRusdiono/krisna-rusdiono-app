@@ -35,7 +35,7 @@ const ProjectSlot = () => {
           {renderedData.map(project => (
             <div
               key={project.projectId}
-              className='col-span-1 flex flex-col drop-shadow-lg shadow-lg hover:shadow-md hover:drop-shadow-md rounded-xl overflow-hidden transition-all [&>div>img]:hover:scale-110 relative [&>:first-child]:hover:opacity-20 [&>button>svg]:hover:fill-white'
+              className='col-span-1 flex flex-col drop-shadow-lg shadow-lg hover:shadow-md hover:drop-shadow-md rounded-xl overflow-hidden transition-all [&>div>img]:hover:scale-110 relative [&>:first-child]:hover:opacity-20 [&>button>svg]:hover:fill-white justify-between'
             >
               <div className='absolute w-full h-full bg-black opacity-0 transition-all z-10 flex justify-center items-center' />
               <Tooltip
@@ -50,12 +50,12 @@ const ProjectSlot = () => {
                   <OpenInNew />
                 </Button>
               </Tooltip>
-              <div className='overflow-hidden h-fill-available border-0 border-b border-solid border-neutral-200'>
+              <div className='overflow-hidden border-0 border-b border-solid border-neutral-200 bg-red-200 h-full flex'>
                 <Image
                   src={project.imgThumbnail}
                   alt={project.projectName}
                   layout='responsive'
-                  className='transition-all scale-105 !h-fill-available'
+                  className='transition-all scale-105  h-full'
                 />
               </div>
               <div className='p-4 bg-white min-h-24'>
