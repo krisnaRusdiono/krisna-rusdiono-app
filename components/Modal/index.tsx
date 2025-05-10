@@ -47,7 +47,7 @@ const Modal = ({ open, toggleModal, data }: { open: boolean; toggleModal: () => 
                 )
               </sup>
             </Typography>
-            <Typography id='modal-modal-description' sx={{ mt: 2 }} className='whitespace-pre-line'>
+            <Typography id='modal-modal-description' sx={{ mt: 2 }} className='whitespace-pre-line max-h-72 overflow-auto'>
               {projectDescriptionLong}
             </Typography>
             <div className='flex flex-col gap-2'>
