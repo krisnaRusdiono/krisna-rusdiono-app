@@ -35,7 +35,7 @@ const ProjectSlot = () => {
         badge='Project Experiences'
         className='bg-slate-900 flex-col'
       >
-        <div className='w-full grid grid-cols-1 gap-4'>
+        <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
           {renderedData.map(project => (
             <div
               key={project.projectId}
@@ -59,10 +59,10 @@ const ProjectSlot = () => {
                   src={project.imgThumbnail}
                   alt={project.projectName}
                   layout='responsive'
-                  className='transition-all scale-105'
+                  className='transition-all scale-105 !h-fill-available'
                 />
               </div>
-              <div className='p-4 bg-white'>
+              <div className='p-4 bg-white min-h-24'>
                 <Typography
                   variant='h5'
                   className='font-bold overflow-hidden text-ellipsis line-clamp-2'

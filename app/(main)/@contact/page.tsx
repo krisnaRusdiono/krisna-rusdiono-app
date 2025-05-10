@@ -13,7 +13,7 @@ const ContactSlot = () => (
     <Typography className='text-center'>
       Glad you read this 🙂, feel free to reach me on these platform!
     </Typography>
-    <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+    <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4'>
       {CONTACT_DATA.map(({ name, icon, url, value }) => (
         <Link
           href={url}
@@ -35,8 +35,12 @@ const ContactSlot = () => (
     </div>
 
     <Typography>
-      And for HR, i am more than happy to share with you my latest CV that you can download 
-      <a className='min-w-0 px-1 lowercase text-inherit hover:!bg-transparent' href="/api/download">
+      And for HR, i am more than happy to share with you my latest CV that you
+      can download
+      <a
+        className='min-w-0 px-1 lowercase text-inherit hover:!bg-transparent'
+        href='/api/download'
+      >
         here
       </a>
     </Typography>
