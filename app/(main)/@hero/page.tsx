@@ -11,7 +11,7 @@ const HeroSlot = () => {
   return (
     <ContentContainer className='pb-24 -mt-12' id='hero'>
       <div
-        className='w-full flex flex-col justify-between items-center px-4 pt-4 gap-4 mt-20'
+        className='w-full flex flex-col justify-between items-center px-4 pt-4 gap-4 mt-20 box-border'
         id='hero'
       >
         <div className='flex flex-col gap-2 items-center justify-center pb-12'>
