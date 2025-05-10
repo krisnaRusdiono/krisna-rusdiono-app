@@ -20,7 +20,7 @@ const Modal = ({ open, toggleModal, data }: { open: boolean; toggleModal: () => 
       projectName = '',
       projectYearStart,
       projectYearEnd,
-      projectDescription,
+      projectDescriptionLong,
       imgThumbnail = Unavailable,
       techStackUrl = [],
     } = data || {};
@@ -43,27 +43,29 @@ const Modal = ({ open, toggleModal, data }: { open: boolean; toggleModal: () => 
               {projectName}{' '}
               <sup className='text-sm'>
                 (
-                {`${projectYearStart}${projectYearEnd && ` ${projectYearEnd}`}`}
+                {`${projectYearStart}${projectYearEnd && ` - ${projectYearEnd}`}`}
                 )
               </sup>
             </Typography>
             <Typography id='modal-modal-description' sx={{ mt: 2 }}>
-              {projectDescription}
+              {projectDescriptionLong}
             </Typography>
-            <Typography id='modal-modal-tech-detail' sx={{ mt: 2 }}>
-              This app built using:
-            </Typography>
-            <div className='w-full'>
-              {(techStackUrl || []).map((item, i) => (
-                <Image
-                  key={`tech-${i}`}
-                  src={item}
-                  width={72}
-                  height={0}
-                  className=''
-                  alt='tech icons'
-                />
-              ))}
+            <div className='flex flex-col gap-2'>
+              <Typography id='modal-modal-tech-detail' sx={{ mt: 2 }}>
+                This app built using:
+              </Typography>
+              <div className='w-full flex items-center'>
+                {(techStackUrl || []).map((item, i) => (
+                  <Image
+                    key={`tech-${i}`}
+                    src={item}
+                    width={50}
+                    height={0}
+                    className='mx-2'
+                    alt='tech icons'
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </Box>

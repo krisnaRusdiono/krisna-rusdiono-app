@@ -6,6 +6,7 @@ export interface ProjectData {
   projectYearStart: string;
   projectYearEnd: string;
   projectDescription: string;
+  projectDescriptionLong: string;
   imgThumbnail: StaticImageData;
   techStackUrl?: (string | StaticImageData)[];
 }
