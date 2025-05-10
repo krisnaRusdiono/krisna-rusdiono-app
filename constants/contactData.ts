@@ -6,6 +6,7 @@ import IcGithub from '@/public/images/ic_github.svg';
 import IcInstagram from '@/public/images/ic_instagram.svg';
 import IcFacebook from '@/public/images/ic_facebook.svg';
 import IcYoutube from '@/public/images/ic_youtube.svg';
+import IcEmail from '@/public/images/ic_email.svg';
 
 export interface ValuedItemData extends ItemData {
     value: string;
@@ -24,6 +25,12 @@ const CONTACT_DATA: ValuedItemData[] = [
     value: 'https://www.linkedin.com/in/krisna-rusdiono',
     icon: IcLinkedin,
     url: 'https://www.linkedin.com/in/krisna-rusdiono',
+  },
+  {
+    name: 'Email',
+    value: 'krisnarusdiono@gmail.com',
+    icon: IcEmail,
+    url: 'mailto://krisnarusdiono@gmail.com',
   },
   {
     name: 'GitHub',
