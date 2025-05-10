@@ -32,7 +32,7 @@ const Modal = ({ open, toggleModal, data }: { open: boolean; toggleModal: () => 
         aria-labelledby='modal-modal-title'
         aria-describedby='modal-modal-description'
       >
-        <Box sx={style} className="max-w-[40rem] !rounded-2xl overflow-hidden">
+        <Box sx={style} className='max-w-[40rem] !rounded-2xl overflow-hidden'>
           <Image
             src={imgThumbnail}
             alt={projectName}
@@ -43,14 +43,20 @@ const Modal = ({ open, toggleModal, data }: { open: boolean; toggleModal: () => 
               {projectName}{' '}
               <sup className='text-sm'>
                 (
-                {`${projectYearStart}${projectYearEnd && ` - ${projectYearEnd}`}`}
+                {`${projectYearStart}${
+                  projectYearEnd && ` - ${projectYearEnd}`
+                }`}
                 )
               </sup>
             </Typography>
-            <Typography id='modal-modal-description' sx={{ mt: 2 }} className='whitespace-pre-line max-h-72 overflow-auto'>
+            <Typography
+              id='modal-modal-description'
+              sx={{ mt: 2 }}
+              className='whitespace-pre-line max-h-72 overflow-auto simple-scrollbar'
+            >
               {projectDescriptionLong}
             </Typography>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-2 simple-scrollbar'>
               <Typography id='modal-modal-tech-detail' sx={{ mt: 2 }}>
                 This app built using:
               </Typography>
