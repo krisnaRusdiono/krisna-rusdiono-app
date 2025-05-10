@@ -29,7 +29,7 @@ const NotFoundPage = () => {
     }
 
     return (
-      <div className='flex justify-center items-center gap-8 flex-col w-auto min-w-screen bg-slate-100 h-auto min-h-screen overflow-hidden'>
+      <div className='flex justify-center items-center gap-8 flex-col w-auto min-w-screen bg-slate-100 h-auto min-h-screen overflow-hidden p-8'>
         <TransitionEnter delay={0.3}>
           <Image
             src={GifRickrolled}
