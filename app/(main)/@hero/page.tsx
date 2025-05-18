@@ -39,6 +39,7 @@ const HeroSlot = () => {
               src={TalentImage}
               width={280}
               className='transition-all'
+              priority
             />
           </div>
         </TransitionEnter>
