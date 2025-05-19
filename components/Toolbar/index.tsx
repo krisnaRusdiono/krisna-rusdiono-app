@@ -3,6 +3,7 @@
 import { AppBar, Button, Divider, Toolbar as ToolbarMUI } from '@mui/material';
 import { useEffect, useState } from 'react';
 import TransitionEnter from '../Transition/Enter';
+import NavigationTitle from '@/enums/navigation';
 
 const Toolbar = () => {
     const [topView, setTopView] = useState<boolean>(false);
@@ -11,7 +12,7 @@ const Toolbar = () => {
       const targetElement = document.getElementById(id);
       if (!targetElement) return;
       const targetTop = targetElement.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({ top: id === 'hero' ? 0 : targetTop, behavior: 'smooth' })
+      window.scrollTo({ top: id === NavigationTitle.HERO ? 0 : targetTop, behavior: 'smooth' })
     }
 
     useEffect(() => {
@@ -43,9 +44,9 @@ const Toolbar = () => {
               classes={{
                 root: 'min-w-4',
               }}
-              onClick={() => scrollTo('hero')}
+              onClick={() => scrollTo(NavigationTitle.HERO)}
             >
-              ME
+              {NavigationTitle.HERO}
             </Button>
           </TransitionEnter>
           <Divider orientation='vertical' flexItem variant='middle' />
@@ -55,9 +56,9 @@ const Toolbar = () => {
               classes={{
                 root: 'min-w-4',
               }}
-              onClick={() => scrollTo('skills')}
+              onClick={() => scrollTo(NavigationTitle.SKILLS)}
             >
-              SKILLS
+              {NavigationTitle.SKILLS}
             </Button>
           </TransitionEnter>
           <Divider orientation='vertical' flexItem variant='middle' />
@@ -67,9 +68,9 @@ const Toolbar = () => {
               classes={{
                 root: 'min-w-4',
               }}
-              onClick={() => scrollTo('project')}
+              onClick={() => scrollTo(NavigationTitle.PROJECT)}
             >
-              Project
+              {NavigationTitle.PROJECT}
             </Button>
           </TransitionEnter>
           <Divider orientation='vertical' flexItem variant='middle' />
@@ -79,9 +80,9 @@ const Toolbar = () => {
               classes={{
                 root: 'min-w-4',
               }}
-              onClick={() => scrollTo('contact')}
+              onClick={() => scrollTo(NavigationTitle.CONTACT)}
             >
-              Contact
+              {NavigationTitle.CONTACT}
             </Button>
           </TransitionEnter>
         </ToolbarMUI>

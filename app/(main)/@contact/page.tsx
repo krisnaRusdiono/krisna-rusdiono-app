@@ -3,6 +3,7 @@
 import ContentContainer from '@/components/ContentContainer';
 import TransitionEnter from '@/components/Transition/Enter';
 import CONTACT_DATA from '@/constants/contactData';
+import NavigationTitle from '@/enums/navigation';
 import { Divider, Typography } from '@mui/material';
 import { useAnimationControls } from 'motion/react';
 import Image from 'next/image';
@@ -18,7 +19,7 @@ const ContactSlot = () => {
   
   return (
     <ContentContainer
-      id='contact'
+      id={NavigationTitle.CONTACT}
       badge='contact'
       className='flex-col [&>p]:text-center gap-8 mx-auto max-w-[60rem]'
       onViewportEnter={startAnimate}

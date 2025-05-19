@@ -7,6 +7,7 @@ import TalentImage from '@/public/images/krisna-rusdiono.png';
 import IcIndonesia from '@/public/images/ic_indonesia_fix.svg';
 import TransitionEnter from '@/components/Transition/Enter';
 import { useAnimationControls } from 'motion/react';
+import NavigationTitle from '@/enums/navigation';
 
 const HeroSlot = () => {
   const yearsOfExperience = new Date().getFullYear() - 2021;
@@ -19,14 +20,13 @@ const HeroSlot = () => {
   
   return (
     <ContentContainer
+      id={NavigationTitle.HERO}
       className='pb-24 max-w-40 md:max-w-none mx-auto -mt-12'
-      id='hero'
       onViewportEnter={startAnimate}
       onViewportLeave={endAnimate}
     >
       <div
         className='w-full flex flex-col justify-between items-center px-4 pt-4 gap-4 mt-20 box-border'
-        id='hero'
       >
         <div className='flex flex-col gap-2 items-center justify-center pb-12'>
           <TransitionEnter delay={0.2} controls={controls}>

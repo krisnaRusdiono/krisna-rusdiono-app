@@ -3,6 +3,7 @@
 import ContentContainer from '@/components/ContentContainer'
 import TransitionEnter from '@/components/Transition/Enter';
 import SKILLS_DATA from '@/constants/skillsData';
+import NavigationTitle from '@/enums/navigation';
 import { Tooltip } from '@mui/material';
 import { useAnimationControls } from 'motion/react';
 import Image from 'next/image';
@@ -17,7 +18,7 @@ const ExpertiseSlot = () => {
 
     return (
       <ContentContainer
-        id='skills'
+        id={NavigationTitle.SKILLS}
         className='bg-white [&>div]:w-full [&>div]:max-w-[40rem]'
         badge='Skills & Familiarity'
         onViewportEnter={startAnimate}

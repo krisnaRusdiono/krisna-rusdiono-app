@@ -4,6 +4,7 @@ import ContentContainer from '@/components/ContentContainer';
 import Modal from '@/components/Modal';
 import TransitionEnter from '@/components/Transition/Enter';
 import PROJECT_DATA from '@/constants/projectData';
+import NavigationTitle from '@/enums/navigation';
 import { ProjectData } from '@/types/projectData';
 import { OpenInNew } from '@mui/icons-material';
 import { Button, Tooltip, Typography } from '@mui/material';
@@ -34,7 +35,7 @@ const ProjectSlot = () => {
 
     return (
       <ContentContainer
-        id='project'
+        id={NavigationTitle.PROJECT}
         badge='Project Experiences'
         className='bg-slate-900 flex-col [&>div>button]:flex [&>div>button]:mt-8'
         onViewportEnter={startAnimate}
