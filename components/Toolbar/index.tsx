@@ -1,6 +1,6 @@
 'use client';
 
-import { AppBar, Button, Divider, Toolbar as ToolbarMUI } from '@mui/material';
+import { AppBar, Button, Divider, Toolbar as ToolbarMUI, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import TransitionEnter from '../Transition/Enter';
 import NavigationTitle from '@/enums/navigation';
@@ -11,7 +11,7 @@ const Toolbar = () => {
     const scrollTo = (id: string) => {
       const targetElement = document.getElementById(id);
       if (!targetElement) return;
-      const targetTop = targetElement.getBoundingClientRect().top + window.scrollY;
+      const targetTop = targetElement.getBoundingClientRect().top + window.scrollY - 50;
       window.scrollTo({ top: id === NavigationTitle.HERO ? 0 : targetTop, behavior: 'smooth' })
     }
 
@@ -41,48 +41,52 @@ const Toolbar = () => {
           <TransitionEnter delay={0.2}>
             <Button
               variant='text'
+              color="inherit"
               classes={{
                 root: 'min-w-4',
               }}
               onClick={() => scrollTo(NavigationTitle.HERO)}
             >
-              {NavigationTitle.HERO}
+              <Typography>{NavigationTitle.HERO}</Typography>
             </Button>
           </TransitionEnter>
           <Divider orientation='vertical' flexItem variant='middle' />
           <TransitionEnter delay={0.4}>
             <Button
               variant='text'
+              color="inherit"
               classes={{
                 root: 'min-w-4',
               }}
               onClick={() => scrollTo(NavigationTitle.SKILLS)}
             >
-              {NavigationTitle.SKILLS}
+              <Typography>{NavigationTitle.SKILLS}</Typography>
             </Button>
           </TransitionEnter>
           <Divider orientation='vertical' flexItem variant='middle' />
           <TransitionEnter delay={0.6}>
             <Button
               variant='text'
+              color="inherit"
               classes={{
                 root: 'min-w-4',
               }}
               onClick={() => scrollTo(NavigationTitle.PROJECT)}
             >
-              {NavigationTitle.PROJECT}
+              <Typography>{NavigationTitle.PROJECT}</Typography>
             </Button>
           </TransitionEnter>
           <Divider orientation='vertical' flexItem variant='middle' />
           <TransitionEnter delay={0.8}>
             <Button
               variant='text'
+              color="inherit"
               classes={{
                 root: 'min-w-4',
               }}
               onClick={() => scrollTo(NavigationTitle.CONTACT)}
             >
-              {NavigationTitle.CONTACT}
+              <Typography>{NavigationTitle.CONTACT}</Typography>
             </Button>
           </TransitionEnter>
         </ToolbarMUI>
