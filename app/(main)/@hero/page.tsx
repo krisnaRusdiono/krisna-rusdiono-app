@@ -26,7 +26,7 @@ const HeroSlot = () => {
       onViewportLeave={endAnimate}
     >
       <div
-        className='w-full flex flex-col justify-between items-center px-4 pt-4 gap-4 mt-20 box-border'
+        className='w-full flex flex-col justify-between items-center px-4 pt-4 gap-4 mt-14 box-border'
       >
         <div className='flex flex-col gap-2 items-center justify-center pb-12'>
           <TransitionEnter delay={0.2} controls={controls}>
