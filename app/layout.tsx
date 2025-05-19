@@ -44,7 +44,6 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
   },
-  themeColor: '#0ea5e9', // Tailwind sky-500
   category: 'technology',
 };
 
