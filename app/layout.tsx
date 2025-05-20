@@ -5,6 +5,7 @@ import { Roboto } from 'next/font/google';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/theme';
 import { ReactNode } from 'react';
+import { APP_URL } from '@/constants/config';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -14,9 +15,10 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(APP_URL),
   title: 'Krisna Rusdiono | Software Engineer Portfolio',
   description:
-    'Explore the portfolio of Krisna Rusdiono – a software engineer skilled in React, Next.js, Angular, and more. View projects, skills, and contact information.',
+    'Explore the portfolio of Krisna Rusdiono, a software engineer skilled in React, Next.js, Angular, and more. View projects, skills, and contact information.',
   keywords: [
     'Frontend Developer',
     'Portfolio',
@@ -31,16 +33,22 @@ export const metadata: Metadata = {
     'Indonesia',
     'Krisna Rusdiono Portfolio',
   ],
-  authors: [{ name: 'Krisna Rusdiono', url: 'https://krisna-rusdiono-app.vercel.app/' }],
+  authors: [{ name: 'Krisna Rusdiono', url: new URL(APP_URL) }],
   creator: 'Krisna Rusdiono',
-  metadataBase: new URL('https://krisna-rusdiono-app.vercel.app/'),
   openGraph: {
     title: 'Krisna Rusdiono | Software Engineer Portfolio',
     description:
       'Software Engineer with 4+ years of experience. Check out my work, skills, and how to contact me.',
-    url: 'https://krisna-rusdiono-app.vercel.app/',
+    url: new URL(APP_URL),
     siteName: 'Krisna Rusdiono Portfolio',
-    images: [],
+    images: [
+      {
+        url: 'https://krisna-rusdiono-app.vercel.app/images/krisna-rusdiono.png',
+        width: 1200,
+        height: 630,
+        alt: 'Krisna Rusdiono Portfolio',
+      },
+    ],
     locale: 'en_US',
     type: 'website',
   },
