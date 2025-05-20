@@ -57,7 +57,7 @@ const HeroSlot = () => {
             variant='body2'
             className='italic text-center my-4 max-w-[34rem]'
           >
-            I&apos;m a Software Engineer with {yearsOfExperience} years of
+            I&apos;m a Software Engineer with {yearsOfExperience}+ years of
             experience from Bandung{' '}
             <Image
               src={IcIndonesia}
