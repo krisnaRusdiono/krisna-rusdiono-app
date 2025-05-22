@@ -16,43 +16,25 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   metadataBase: new URL(APP_URL),
-  title: 'Krisna Rusdiono | Software Engineer Portfolio',
+  title: 'Aplikasi HR yang paling fleksibel | AkselHR',
   description:
-    'Explore the portfolio of Krisna Rusdiono, a software engineer skilled in React, Next.js, Angular, and more. View projects, skills, and contact information.',
-  keywords: [
-    'Frontend Developer',
-    'Portfolio',
-    'JavaScript',
-    'TypeScript',
-    'React',
-    'Next.js',
-    'Angular',
-    'Vue Js',
-    'Web Developer',
-    'Software Engineer',
-    'Indonesia',
-    'Krisna Rusdiono Portfolio',
-  ],
-  authors: [{ name: 'Krisna Rusdiono', url: new URL(APP_URL) }],
-  creator: 'Krisna Rusdiono',
+    'Tingkatkan efisiensi HR dengan AkselHR, solusi lengkap untuk absensi, payroll, reimbursement, dan manajemen karyawan. Coba gratis sekarang!',
   openGraph: {
-    title: 'Krisna Rusdiono | Software Engineer Portfolio',
+    title: 'Aplikasi HR yang paling fleksibel | AkselHR',
     description:
-      'Software Engineer with 4+ years of experience. Check out my work, skills, and how to contact me.',
-    url: new URL(APP_URL),
-    siteName: 'Krisna Rusdiono Portfolio',
+      'Tingkatkan efisiensi HR dengan AkselHR, solusi lengkap untuk absensi, payroll, reimbursement, dan manajemen karyawan. Coba gratis sekarang!',
+    siteName: 'AkselHR',
     images: [
       {
-        url: 'https://krisna-rusdiono-app.vercel.app/images/krisna-rusdiono.png',
-        width: 1200,
-        height: 630,
-        alt: 'Krisna Rusdiono Portfolio',
+        url: '/assets/metaimage.png',
+        width: 800,
+        height: 600,
+        alt: 'AkselHR',
       },
     ],
-    locale: 'en_US',
+    locale: 'id_ID',
     type: 'website',
   },
-  category: 'technology',
 };
 
 export default function RootLayout({
