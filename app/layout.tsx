@@ -6,6 +6,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/theme';
 import { ReactNode } from 'react';
 import { APP_URL } from '@/constants/config';
+import Toolbar from '@/components/Toolbar';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(APP_URL),
   title: 'Krisna Rusdiono | Software Engineer Portfolio',
   description:
-    'Explore the portfolio of Krisna Rusdiono, a software engineer skilled in React, Next.js, Angular, and more. View projects, skills, and contact information.',
+    'Discover Krisna Rusdiono, a Frontend Developer in Indonesia with expertise in React, Next.js, Angular, and TypeScript. View projects, skills, and contact details.',
   keywords: [
     'Frontend Developer',
     'Portfolio',
@@ -53,12 +54,23 @@ export const metadata: Metadata = {
     type: 'website',
   },
   category: 'technology',
+  alternates: {
+    canonical: APP_URL,
+  },
 };
 
 export default function RootLayout({
   children,
+  hero,
+  project,
+  skills,
+  contact,
 }: Readonly<{
   children: ReactNode;
+  hero: ReactNode;
+  project: ReactNode;
+  skills: ReactNode;
+  contact: ReactNode;
 }>) {
   return (
     <html lang='en'>
@@ -67,7 +79,17 @@ export default function RootLayout({
         id='__next'
       >
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeProvider theme={theme}>
+            {children}
+            <div className='bg-slate-100'>
+              <Toolbar />
+              {hero}
+              {skills}
+              {project}
+              {contact}
+              <div className='h-4 w-full bg-slate-900' />
+            </div>
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>

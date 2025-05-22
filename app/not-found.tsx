@@ -1,8 +1,6 @@
 'use client'
 
-import Image from 'next/image';
 import { Button, Typography } from '@mui/material';
-import GifRickrolled from '@/public/images/rick-rolled.gif';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import TransitionEnter from '@/components/Transition/Enter';
@@ -30,17 +28,10 @@ const NotFoundPage = () => {
 
     return (
       <div className='flex justify-center items-center gap-8 flex-col w-auto min-w-screen bg-slate-100 h-auto min-h-screen overflow-hidden p-8'>
-        <TransitionEnter delay={0.3}>
-          <Image
-            src={GifRickrolled}
-            alt='404'
-            width={320}
-            draggable={false}
-            className='w-auto max-w-96 shadow-lg hover:shadow-md transition-shadow'
-            layout='responsive'
-          />
-        </TransitionEnter>
-        <div className='flex flex-col gap-2'>
+        <div className='flex flex-col gap-4'>
+          <TransitionEnter delay={0.5}>
+            <Typography className='text-center' variant='h2'>Uh oh, 404</Typography>  
+          </TransitionEnter>
           <TransitionEnter delay={0.5}>
             <Typography>Nothing to see here 🔎, wanna comeback?</Typography>  
           </TransitionEnter>

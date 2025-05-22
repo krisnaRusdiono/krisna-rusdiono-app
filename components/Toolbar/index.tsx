@@ -4,8 +4,10 @@ import { AppBar, Button, Divider, Toolbar as ToolbarMUI, Typography } from '@mui
 import { useEffect, useState } from 'react';
 import TransitionEnter from '../Transition/Enter';
 import NavigationTitle from '@/enums/navigation';
+import { usePathname } from 'next/navigation';
 
 const Toolbar = () => {
+    const pathname = usePathname();
     const [topView, setTopView] = useState<boolean>(false);
 
     const scrollTo = (id: string) => {
@@ -21,6 +23,10 @@ const Toolbar = () => {
       });
     }, [])
 
+    if (pathname !== '/') {
+      return null;
+    }
+
     return (
       <AppBar
         position='sticky'
@@ -30,7 +36,7 @@ const Toolbar = () => {
             topView
               ? 'shadow-none'
               : 'bg-transparent box-border shadow-none p-4'
-          } transition-all`,
+          } ${pathname !== '/' && 'hidden'} transition-all`,
         }}
       >
         <ToolbarMUI
