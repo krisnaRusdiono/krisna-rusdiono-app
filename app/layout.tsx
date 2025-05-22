@@ -6,6 +6,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/theme';
 import { ReactNode } from 'react';
 import { APP_URL } from '@/constants/config';
+import Toolbar from '@/components/Toolbar';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -57,8 +58,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  hero,
+  project,
+  skills,
+  contact,
 }: Readonly<{
   children: ReactNode;
+  hero: ReactNode;
+  project: ReactNode;
+  skills: ReactNode;
+  contact: ReactNode;
 }>) {
   return (
     <html lang='en'>
@@ -67,7 +76,17 @@ export default function RootLayout({
         id='__next'
       >
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeProvider theme={theme}>
+            {children}
+            <div className='bg-slate-100'>
+              <Toolbar />
+              {hero}
+              {skills}
+              {project}
+              {contact}
+              <div className='h-4 w-full bg-slate-900' />
+            </div>
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
