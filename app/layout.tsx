@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(APP_URL),
   title: 'Krisna Rusdiono | Software Engineer Portfolio',
   description:
-    'Explore the portfolio of Krisna Rusdiono, a software engineer skilled in React, Next.js, Angular, and more. View projects, skills, and contact information.',
+    'Discover Krisna Rusdiono, a Frontend Developer in Indonesia with expertise in React, Next.js, Angular, and TypeScript. View projects, skills, and contact details.',
   keywords: [
     'Frontend Developer',
     'Portfolio',
@@ -54,6 +54,9 @@ export const metadata: Metadata = {
     type: 'website',
   },
   category: 'technology',
+  alternates: {
+    canonical: APP_URL,
+  },
 };
 
 export default function RootLayout({

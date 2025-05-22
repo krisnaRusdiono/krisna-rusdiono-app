@@ -25,19 +25,20 @@ const HeroSlot = () => {
       onViewportEnter={startAnimate}
       onViewportLeave={endAnimate}
     >
-      <div
+      <section
         className='w-full flex flex-col justify-between items-center px-4 pt-4 gap-4 mt-14 box-border'
       >
         <div className='flex flex-col gap-2 items-center justify-center pb-12'>
           <TransitionEnter delay={0.2} controls={controls}>
-            <Typography className='text-5xl md:text-6xl font-extrabold mx-auto text-center uppercase leading-[3.5rem] w-full flex items-center box-border px-4'>
+            <Typography className='text-5xl md:text-6xl font-extrabold mx-auto text-center uppercase leading-[3.5rem] w-full flex items-center box-border px-4' variant='h1'>
               Krisna Rusdiono
             </Typography>
           </TransitionEnter>
           <TransitionEnter controls={controls} className='flex w-full justify-center' delay={0.4}>
             <div className='w-full flex justify-between max-w-80 md:max-w-none'>
-              <Typography>Software Engineer</Typography>|
-              <Typography>2021 - present</Typography>
+              <Typography variant='h2' className='text-lg'>Software Engineer</Typography>
+              <Typography variant='h2' className='text-lg'>|</Typography>
+              <Typography className='text-lg font-normal'>2021 - present</Typography>
             </div>
           </TransitionEnter>
         </div>
@@ -72,7 +73,7 @@ const HeroSlot = () => {
             code to create intuitive and high-performance user interfaces.
           </Typography>
         </TransitionEnter>
-      </div>
+      </section>
     </ContentContainer>
   );
 };
