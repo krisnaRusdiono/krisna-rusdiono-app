@@ -1,7 +1,8 @@
 import Toolbar from '@/components/Toolbar';
-import { APP_URL } from '@/constants/config';
 import { Metadata } from 'next';
 import { ReactNode } from 'react'
+
+const APP_URL = new URL('https://krisna-rusdiono-app-git-fix-metadata-krisnarusdionos-projects.vercel.app')
 
 export const metadata: Metadata = {
   metadataBase: new URL(APP_URL),
