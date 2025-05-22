@@ -5,14 +5,8 @@ import { Roboto } from 'next/font/google';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/theme';
 import { ReactNode } from 'react';
-import { APP_URL } from '@/constants/config';
 
-const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-roboto',
-});
+const APP_URL = new URL('https://krisna-rusdiono-app-git-fix-metadata-krisnarusdionos-projects.vercel.app')
 
 export const metadata: Metadata = {
   metadataBase: new URL(APP_URL),
@@ -36,6 +30,13 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
+
+const roboto = Roboto({
+  weight: ['300', '400', '500', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-roboto',
+});
 
 export default function RootLayout({
   children,
